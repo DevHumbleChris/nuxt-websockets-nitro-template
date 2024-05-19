@@ -1,15 +1,16 @@
 <script setup lang="ts">
 // In prod: check if secure, then use wss://
 const { status, data, send, open, close } = useWebSocket(
-  `wss://${location.host}/api/websocket`
+  `ws://${location.host}/api/websocket`
 );
 
 const history = ref<string[]>([]);
-watch(data, (newValue) => {
+watch(data, (newValue: string) => {
   history.value.push(`server: ${newValue}`);
 });
 
 const message = ref("");
+
 function sendData() {
   history.value.push(`client: ${message.value}`);
   send(message.value);
