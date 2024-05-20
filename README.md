@@ -39,12 +39,14 @@ Before you begin, ensure you have met the following requirements:
 ## Installation
 
 1. Clone the repository:
+
     ```bash
     git clone https://github.com/DevHumbleChris/nuxt-websockets-nitro-template.git
     cd nuxt-websockets-nitro-template
     ```
 
 2. Install dependencies:
+
     ```bash
     pnpm install
     ```
